@@ -54,7 +54,7 @@ class PagamentoActivity : AppCompatActivity() {
                 val selectedAddressId = selectedRadioButton.tag.toString().toInt()
                 enviaOrdem(userId, totalValue.toString().toDouble(), productList, selectedAddressId)
             } else {
-                Toast.makeText(this, "Por favor, selecione um endereÃ§o", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Por favor, selecione um endereço", Toast.LENGTH_LONG).show()
             }
         }
     }
@@ -64,7 +64,7 @@ class PagamentoActivity : AppCompatActivity() {
             .create()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://3faa33f1-eea0-4537-8cd7-1fa0f9ad22ea-00-2mw0ejp2drxfg.janeway.replit.dev/")
+            .baseUrl("https://12df8f90-3b4d-4a54-ac68-aea6e1270b12-00-n3vhfh9b7kxt.riker.replit.dev/")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
 
@@ -80,14 +80,14 @@ class PagamentoActivity : AppCompatActivity() {
                     }
                 } else {
                     val errorBody = response.errorBody()?.string()
-                    Log.e("API_ERROR", "Erro ao carregar endereÃ§os: $errorBody")
-                    Toast.makeText(this@PagamentoActivity, "Erro ao carregar endereÃ§os", Toast.LENGTH_LONG).show()
+                    Log.e("API_ERROR", "Erro ao carregar endereços: $errorBody")
+                    Toast.makeText(this@PagamentoActivity, "Erro ao carregar endereços", Toast.LENGTH_LONG).show()
                 }
             }
 
             override fun onFailure(call: Call<List<Endereco>>, t: Throwable) {
-                Log.e("API_ERROR", "Falha na conexÃ£o", t)
-                Toast.makeText(this@PagamentoActivity, "Falha na conexÃ£o", Toast.LENGTH_LONG).show()
+                Log.e("API_ERROR", "Falha na conexão", t)
+                Toast.makeText(this@PagamentoActivity, "Falha na conexão", Toast.LENGTH_LONG).show()
             }
         })
     }
@@ -108,7 +108,7 @@ class PagamentoActivity : AppCompatActivity() {
             .create()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://292bcae9-ca5e-4163-8642-7a1e875ee12e-00-1l6vkopzq5vlc.worf.repl.co/")
+            .baseUrl("https://12df8f90-3b4d-4a54-ac68-aea6e1270b12-00-n3vhfh9b7kxt.riker.replit.dev/")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
 
@@ -130,8 +130,8 @@ class PagamentoActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<ResponseCompra>, t: Throwable) {
-                Log.e("API_ERROR", "Falha na conexÃ£o", t)
-                Toast.makeText(this@PagamentoActivity, "Falha na conexÃ£o", Toast.LENGTH_LONG).show()
+                Log.e("API_ERROR", "Falha na conexão", t)
+                Toast.makeText(this@PagamentoActivity, "Falha na conexão", Toast.LENGTH_LONG).show()
             }
         })
     }
