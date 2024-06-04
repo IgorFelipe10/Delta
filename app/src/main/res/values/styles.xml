@@ -1,0 +1,44 @@
+<resources>
+    <style name="CustomTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="CustomButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/button_background</item>
+        <item name="android:textColor">@color/button_text</item>
+        <item name="android:height">@dimen/button_height_small</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="ProductTitle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#333</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProductDescription">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#666</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ProductLabel">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#333</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="ProductEditText">
+        <item name="android:inputType">number</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="ProductButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">#2C7D8C</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+</resources>
