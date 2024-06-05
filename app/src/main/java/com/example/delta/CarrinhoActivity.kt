@@ -1,5 +1,4 @@
 package com.example.delta
-
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -8,10 +7,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.delta.CarrinhoApiService
-import com.example.delta.PagamentoActivity
-import com.example.delta.Produto
-import com.example.delta.R
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -88,7 +83,5 @@ class CarrinhoActivity : AppCompatActivity() {
         runOnUiThread {
             totalTextView.text = "Total: R$${String.format("%.2f", total)}"
         }
-
-
     }
 }

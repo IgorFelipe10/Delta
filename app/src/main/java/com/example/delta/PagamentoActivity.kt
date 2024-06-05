@@ -108,7 +108,7 @@ class PagamentoActivity : AppCompatActivity() {
             .create()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://12df8f90-3b4d-4a54-ac68-aea6e1270b12-00-n3vhfh9b7kxt.riker.replit.dev/")
+            .baseUrl("https://12df8f90-3b4d-4a54-ac68-aea6e1270b12-00-n3vhfh9b7kxt.riker.replit.dev")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
 
@@ -171,4 +171,3 @@ data class ResponseCompra(
     val code: Int,
     val message: String
 )
-

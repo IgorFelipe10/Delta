@@ -9,9 +9,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.delta.CarrinhoApiService
-import com.example.delta.Produto
-import com.example.delta.R
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -40,7 +37,6 @@ class CarrinhoAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         holder.productName.text = item.produtoNome
-        // CorreÃƒÂ§ÃƒÂ£o: Assegurando que o preÃƒÂ§o ÃƒÂ© tratado como um nÃƒÂºmero para formataÃƒÂ§ÃƒÂ£o
         holder.productPrice.text = item.produtoPreco?.let { String.format("R$%.2f", it.toDouble()) }
 
         holder.productQuantity.text = "Qtd: ${item.quantidadeDisponivel}"
@@ -64,7 +60,7 @@ class CarrinhoAdapter(
                     items.removeAt(position)
                     notifyItemRemoved(position)
                     notifyItemRangeChanged(position, items.size)
-                    updateTotal()  // Chamada da funÃƒÂ§ÃƒÂ£o para atualizar o total
+                    updateTotal()
                     Toast.makeText(context, "Item deletado com sucesso", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(context, "Falha ao deletar o item", Toast.LENGTH_SHORT).show()
@@ -84,4 +80,3 @@ class CarrinhoAdapter(
 
     override fun getItemCount() = items.size
 }
-
